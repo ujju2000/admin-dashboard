@@ -5,7 +5,9 @@
     margin: 0px;
     box-sizing: border-box;
 }
-
+p {
+    color : rgb(68, 68, 68)
+}
 body {
     height : 100vh;
     width : 100vw;
@@ -40,7 +42,7 @@ aside {
 
 main {  
     
-    height : auto;
+    
     width : auto;
     grid-row: 2/5;
     grid-column: 2/5;
@@ -220,7 +222,7 @@ header img {
 main {
     display : grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,fr);
+    grid-template-rows: repeat(3,1fr);
     /* background-color: green; */
 }
 
@@ -237,16 +239,16 @@ main {
 .announcements {
     height : 400px;
     grid-column: 3/4;
-    /* grid-row: 1/2; */
-    background-color: bisque;
+    grid-row: 1/2;
+    /* background-color: bisque; */
 }
 
 .trending {
-    height : 250px;
+
     
     grid-column: 3/4;
-    /* grid-row: 2/4; */
-    background-color: black;
+    grid-row: 2/4;
+    /* background-color: black; */
 }
 .cards {
     height : calc(100% - 40px);
@@ -285,4 +287,55 @@ main {
     display : flex;
     justify-content: space-around;
 
+}
+
+/* announcement */
+
+.announcements h3 {
+    padding : 10px;
+    font-weight: 600;
+    /* margin-top : 10px; */
+    font-size: 25px;
+}
+.chart {
+    height : 80%;
+    background-color: white;
+    width : 70%;
+    margin : 10px 20px;
+    padding : 20px;
+    border-radius: 5px;
+    box-shadow: 3px 2px 9px 0px rgba(0,0,0,0.75);
+}
+
+
+.announcement {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+.announcement p {
+    margin-bottom: 10px;
+}
+
+
+/* trending */
+.trending {
+    display : flex;
+    /* width : 80%; */
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.trendings .chart {
+    height : 100%;
+}
+.handles {
+    width : 80%;
+    justify-content: space-evenly;
+    display: flex;
+    margin : 10px;
+
+}
+.trending img {
+    height : 30px;
+    width : 30px;
 }
